@@ -26,7 +26,7 @@ nltk.download('punkt')
 
 CORS(app)
 
-#Download gunter's words
+# Download Gunter's Words
 # Opening JSON file
 f = open('emotionChart/words.json')
  # returns JSON object as 
@@ -42,6 +42,7 @@ def analyzeWord(word):
   return False
 
 def analyzeText(txt):
+        #delete all of the non- alphanumeric characters
         noCharText= re.sub(r'[^\w]', ' ', txt)
         wordArr = noCharText.split(' ')
         emotionWordCount = 0
